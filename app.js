@@ -24,7 +24,6 @@ function fetchData() {
 
         for (let email in data) {
             entries.push({
-                email: email,
                 name: data[email].name,
                 score: data[email].oQ
             });
@@ -39,10 +38,8 @@ function fetchData() {
         // Populate table with sorted data
         entries.forEach(entry => {
             const row = dataTable.insertRow();
-            const emailCell = row.insertCell(0);
-            const nameCell = row.insertCell(1);
-            const scoreCell = row.insertCell(2);
-            emailCell.textContent = entry.email;
+            const nameCell = row.insertCell(0);
+            const scoreCell = row.insertCell(1);
             nameCell.textContent = entry.name;
             scoreCell.textContent = entry.score;
         });

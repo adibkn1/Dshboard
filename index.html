@@ -5,14 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firebase Data Display</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         th, td {
-            border: 1px solid black;
-            padding: 8px;
+            padding: 12px 15px;
             text-align: left;
+        }
+        th {
+            background-color: #f4f4f9;
+            color: #555;
+        }
+        tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:last-child {
+            border-bottom: 0;
         }
     </style>
 </head>
@@ -21,7 +48,6 @@
     <table id="data-table">
         <thead>
             <tr>
-                <th>Email</th>
                 <th>Name</th>
                 <th>Score</th>
             </tr>
